@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+configpath="<%= @configpath %>"
+manifestpath="<%= @manifestpath %>"
+
+cd $codedir
+puppet apply --config $configpath $manifestpath
+

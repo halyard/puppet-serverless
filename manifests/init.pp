@@ -1,21 +1,30 @@
-# == Class: masterless
-#
-# Full description of class masterless here.
-#
-# === Parameters
-#
-# [*sample_parameter*]
-#   Explanation of what this parameter affects and what it defaults to.
-#
-class masterless (
-  $package_name = $::masterless::params::package_name,
-  $service_name = $::masterless::params::service_name,
-) inherits ::masterless::params {
+class masterless(
+    $codedir = '/etc/puppetlabs/code',
+    $bindir = '/usr/local/bin'
+) {
+    $configpath = "${codedir}/conf/puppet.conf"
+    $envdir = "${codedir}/environments/production"
+    $manifestpath = "${envdir}/manifests/site.pp"
 
-  # validate parameters here
+    file { "${bindir}/puppet-run":
+        ensure => 'file',
+        content => template('masterless/puppet-run.erb'),
+        mode => '0755'
+    }
 
-  class { '::masterless::install': } ->
-  class { '::masterless::config': } ~>
-  class { '::masterless::service': } ->
-  Class['::masterless']
+    file { '/etc/systemd/system/puppet-run.service':
+        ensure => 'file',
+        content => template('masterless/puppet-run.service.erb')
+    }
+
+    file { '/etc/systemd/system/puppet-run.timer':
+        ensure => 'file',
+        content => template('masterless/puppet-run.timer.erb')
+    }
+
+    file { '/etc/systemd/system/multi-user.target.wants/puppet-run.timer':
+        ensure => 'link',
+        target => '/etc/systemd/system/puppet-run.timer',
+        require => File['/etc/systemd/system/puppet-run.timer']
+    }
 }
