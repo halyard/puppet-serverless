@@ -1,7 +1,7 @@
 class masterless(
     $codedir = params_lookup('codedir'),
     $bindir  = params_lookup('bindir')
-    ) inherit masterless::params {
+    ) inherits masterless::params {
 
     $configpath = "${codedir}/conf/puppet.conf"
     $envdir = "${codedir}/environments/production"
