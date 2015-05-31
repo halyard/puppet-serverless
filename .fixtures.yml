@@ -1,5 +1,6 @@
 fixtures:
   repositories:
     stdlib: "https://github.com/puppetlabs/puppetlabs-stdlib.git"
+    puppi: "https://github.com/example42/puppi"
   symlinks:
     masterless: "#{source_dir}"
