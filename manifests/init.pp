@@ -1,7 +1,7 @@
 class masterless(
     $codedir = '/etc/puppetlabs/code',
     $bindir = '/usr/local/bin'
-) {
+) inherit masterless::params {
     $configpath = "${codedir}/conf/puppet.conf"
     $envdir = "${codedir}/environments/production"
     $manifestpath = "${envdir}/manifests/site.pp"
