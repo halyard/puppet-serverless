@@ -1,17 +1,16 @@
 masterless
 ==============
 
-[![Module Version](https://img.shields.io/puppetforge/v/akerl/masterless.svg)](https://forge.puppetlabs.com/akerl/masterless)
-[![Module Score](https://img.shields.io/puppetforge/f/akerl/masterless.svg)](https://forge.puppetlabs.com/akerl/masterless/scores)
-[![Dependency Status](https://img.shields.io/gemnasium/akerl/masterless.svg)](https://gemnasium.com/akerl/masterless)
-[![Build Status](https://img.shields.io/travis/akerl/masterless.svg)](https://travis-ci.org/akerl/masterless)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
+[![Build Status](https://img.shields.io/circleci/project/halyard/puppet-masterless.svg)](https://circleci.com/gh/halyard/puppet-masterless)
 
-Short description
+Set up systemd files to run puppet without a master
 
 ## Usage
 
-## Setup
+```puppet
+include masterless
+```
 
 ## License
 
