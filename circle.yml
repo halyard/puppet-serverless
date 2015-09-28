@@ -1,0 +1,4 @@
+test:
+  override:
+    - bundle exec puppet-lint --with-filename --fail-on-warnings --relative manifests
+    - bundle exec puppet parser validate manifests
