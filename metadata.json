@@ -1,0 +1,22 @@
+{
+  "name": "halyard-masterless",
+  "version": "0.1.3",
+  "author": "Les Aker",
+  "license": "MIT",
+  "summary": "Configure masterless puppet runs",
+  "source": "https://github.com/halyard/puppet-masterless",
+  "project_page": "https://github.com/halyard/puppet-masterless",
+  "issues_url": "https://github.com/halyard/puppet-masterless/issues",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Darwin",
+      "operatingsystemmajrelease": [
+        "14",
+        "15"
+      ]
+    }
+  ]
+}
