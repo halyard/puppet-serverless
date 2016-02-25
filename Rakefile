@@ -10,7 +10,7 @@ end
 
 desc 'Run syntax and lint checks'
 task test: [
-  :metadata,
+  :metadata_lint,
   :syntax,
   :lint
 ]
