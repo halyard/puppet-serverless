@@ -3,7 +3,7 @@ masterless
 
 [![Dependency Status](https://img.shields.io/gemnasium/halyard/puppet-masterless.svg)](https://gemnasium.com/halyard/puppet-masterless)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
-[![Build Status](https://img.shields.io/circleci/project/halyard/puppet-masterless.svg)](https://circleci.com/gh/halyard/puppet-masterless)
+[![Build Status](https://img.shields.io/circleci/project/halyard/puppet-masterless/master.svg)](https://circleci.com/gh/halyard/puppet-masterless)
 
 Set up systemd files to run puppet without a master
 
