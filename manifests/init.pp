@@ -10,9 +10,8 @@ class masterless(
     $manifestpath = "${envdir}/manifests/site.pp"
 
     file { "${bindir}/puppet-run":
-        ensure  => 'file',
-        content => template('masterless/puppet-run.erb'),
-        mode    => '0755'
+        ensure  => link,
+        target  => "${codedir}/meta/puppet-run"
     }
 
     file { '/etc/systemd/system/puppet-run.service':
