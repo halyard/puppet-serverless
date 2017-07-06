@@ -1,6 +1,6 @@
 {
   "name": "halyard-masterless",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Les Aker",
   "license": "MIT",
   "summary": "Configure masterless puppet runs",
