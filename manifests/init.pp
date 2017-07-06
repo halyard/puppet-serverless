@@ -1,17 +1,12 @@
 ##
 # Sets up puppet to run masterlessly via a systemd timer
 class masterless(
-    $codedir = '/etc/puppetlabs/code',
+    $repodir = '/opt/halyard'
     $bindir = '/usr/local/bin'
 ) {
-
-    $configpath = "${codedir}/conf/puppet.conf"
-    $envdir = "${codedir}/environments/production"
-    $manifestpath = "${envdir}/manifests/site.pp"
-
     file { "${bindir}/puppet-run":
         ensure  => link,
-        target  => "${codedir}/meta/puppet-run"
+        target  => "${repodir}/meta/puppet-run"
     }
 
     file { '/etc/systemd/system/puppet-run.service':
