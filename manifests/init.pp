@@ -1,12 +1,12 @@
 ##
 # Sets up puppet to run masterlessly via a systemd timer
 class masterless(
-    $repodir = '/opt/halyard'
+    $repodir = '/opt/halyard',
     $bindir = '/usr/local/bin'
 ) {
     file { "${bindir}/puppet-run":
-        ensure  => link,
-        target  => "${repodir}/meta/puppet-run"
+        ensure => link,
+        target => "${repodir}/meta/puppet-run"
     }
 
     file { '/etc/systemd/system/puppet-run.service':
