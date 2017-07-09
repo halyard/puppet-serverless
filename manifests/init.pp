@@ -13,17 +13,31 @@ class masterless(
 
     file { '/etc/systemd/system/puppet-run.service':
         ensure  => 'file',
-        content => template('masterless/puppet-run.service.erb')
+        content => template('masterless/puppet-run.service.erb'),
+        notify  =>  Exec['Puppet-run refresh systemd']
     }
 
     file { '/etc/systemd/system/puppet-run.timer':
         ensure  => 'file',
-        content => template('masterless/puppet-run.timer.erb')
+        content => template('masterless/puppet-run.timer.erb'),
+        notify  =>  Exec['Puppet-run refresh systemd']
     }
 
     file { '/etc/systemd/system/multi-user.target.wants/puppet-run.timer':
         ensure  => 'link',
         target  => '/etc/systemd/system/puppet-run.timer',
-        require => File['/etc/systemd/system/puppet-run.timer']
+        require => File['/etc/systemd/system/puppet-run.timer'],
+        notify  =>  Exec['Puppet-run refresh systemd']
+    }
+
+    exec { 'Puppet-run refresh systemd':
+        command     => 'systemctl daemon-reload',
+        refreshonly => true,
+        path        => ['/usr/bin', '/bin']
+    }
+    ~> exec { 'Start puppet-run':
+        command     => 'systemctl start puppet-run.timer',
+        refreshonly => true,
+        path        => ['/usr/bin', '/bin']
     }
 }
