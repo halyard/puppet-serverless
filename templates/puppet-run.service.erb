@@ -4,4 +4,5 @@ Description=Run puppet
 [Service]
 Type=simple
 ExecStart=<%= "#{@bindir}/puppet-run" %>
+Environment=HOME=<%= @repodir %>
 
