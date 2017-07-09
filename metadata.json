@@ -11,12 +11,5 @@
 
   ],
   "operatingsystem_support": [
-    {
-      "operatingsystem": "Darwin",
-      "operatingsystemmajrelease": [
-        "14",
-        "15"
-      ]
-    }
   ]
 }
