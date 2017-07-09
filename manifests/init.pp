@@ -2,7 +2,9 @@
 # Sets up puppet to run masterlessly via a systemd timer
 class masterless(
     $repodir = '/opt/halyard',
-    $bindir = '/usr/local/bin'
+    $bindir = '/usr/local/bin',
+    $bootdelay = '1min',
+    $frequency = '1hour'
 ) {
     file { "${bindir}/puppet-run":
         ensure => link,

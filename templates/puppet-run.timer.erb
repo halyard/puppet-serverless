@@ -2,8 +2,8 @@
 Description=Schedule puppet run
 
 [Timer]
-OnBootSec=1min
-OnUnitActiveSec=1hour
+OnBootSec=<%= @bootdelay %>
+OnUnitActiveSec=<%= @frequency %>
 
 [Install]
 WantedBy=multi-user.target
