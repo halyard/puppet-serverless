@@ -1,7 +1,7 @@
 ##
 # Sets up puppet to run masterlessly via a systemd timer
 class masterless(
-    $repodir = '/opt/halyard',
+    $repodir = '/opt/halyard/repo',
     $bindir = '/usr/local/bin',
     $bootdelay = '1min',
     $frequency = '1hour'
