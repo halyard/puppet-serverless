@@ -6,6 +6,10 @@ class masterless(
     $bootdelay = '1min',
     $frequency = '1hour'
 ) {
+    file { '/etc/systemd/system/multi-user.target.wants/puppet.service':
+        ensure => absent
+    }
+
     file { "${bindir}/puppet-run":
         ensure => link,
         target => "${repodir}/meta/puppet-run"
