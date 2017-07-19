@@ -16,7 +16,7 @@ class masterless::darwin {
     notify  =>  Exec['Puppet-run refresh launchd']
   }
 
-  exec { 'Puppet-run refresh systemd':
+  exec { 'Puppet-run refresh launchd':
     command     => 'launchctl load -wF /Library/LaunchDaemons/com.halyard.puppet-run.plist',
     refreshonly => true,
     path        => ['/usr/bin', '/bin'],
