@@ -13,7 +13,7 @@ class masterless::darwin {
   file { '/Library/LaunchDaemons/com.halyard.puppet-run.plist':
     ensure  => 'file',
     content => template('masterless/puppet-run.launchd.erb'),
-    notify  =>  Exec['Puppet-run refresh launchd']
+    notify  => Exec['Puppet-run refresh launchd']
   }
 
   exec { 'Puppet-run refresh launchd':
