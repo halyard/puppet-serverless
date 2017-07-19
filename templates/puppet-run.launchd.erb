@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.halyard.puppet-run</string>
+    <key>KeepAlive</key>
+    <false/>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>SUDO_USER</key>
+        <string><%= @id %></string>
+    </dict>
+    <key>ProgramArguments</key>
+    <array>
+    <string><%= @bindir %>/puppet-run</string>
+    </array>
+    <key>StartInterval</key>
+    <integer><%= @frequency %></integer>
+</dict>
+</plist>
