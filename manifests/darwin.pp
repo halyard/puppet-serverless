@@ -4,8 +4,8 @@ class masterless::darwin {
   $repodir = $masterless::repodir
   $bindir = $masterless::bindir
   $frequency = $masterless::frequency
-  
-  file { "${bindir}":
+
+  file { $bindir:
     ensure => directory
   }
   -> file { "${bindir}/puppet-run":
