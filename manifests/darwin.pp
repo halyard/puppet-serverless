@@ -5,7 +5,10 @@ class masterless::darwin {
   $bindir = $masterless::bindir
   $frequency = $masterless::frequency
 
-  file { "${bindir}/puppet-run":
+  file { $bindir:
+    ensure => directory
+  }
+  -> file { "${bindir}/puppet-run":
     ensure => link,
     target => "${repodir}/meta/puppet-run"
   }
