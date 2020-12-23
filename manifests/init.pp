@@ -10,6 +10,7 @@ class serverless(
     case $::osfamily {
         'Darwin': { include serverless::darwin }
         'Archlinux': { include serverless::systemd }
+        'Arch': { include serverless::systemd }
         default: { fail("Module does not support ${::osfamily}") }
     }
 
