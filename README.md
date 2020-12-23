@@ -1,21 +1,19 @@
-**Deprecation Notice:** I'm in the process of revamping my puppet work, this repo is currently not up to date.
-
-masterless
+serverless
 ==============
 
-[![Puppet Forge](https://img.shields.io/puppetforge/v/halyard/masterless.svg)](https://forge.puppetlabs.com/halyard/masterless)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/halyard/serverless.svg)](https://forge.puppetlabs.com/halyard/serverless)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
-[![Build Status](https://img.shields.io/travis/com/halyard/puppet-masterless.svg)](https://travis-ci.com/halyard/puppet-masterless)
+[![Build Status](https://img.shields.io/travis/com/halyard/puppet-serverless.svg)](https://travis-ci.com/halyard/puppet-serverless)
 
-Set up systemd files to run puppet without a master
+Set up local puppet runs from the current configuration without a Puppet server
 
 ## Usage
 
 ```puppet
-include masterless
+include serverless
 ```
 
 ## License
 
-masterless is released under the MIT License. See the bundled LICENSE file for details.
+serverless is released under the MIT License. See the bundled LICENSE file for details.
 

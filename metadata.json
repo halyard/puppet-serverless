@@ -1,12 +1,12 @@
 {
-  "name": "halyard-masterless",
-  "version": "0.1.18",
+  "name": "halyard-serverless",
+  "version": "0.2.0",
   "author": "Les Aker",
   "license": "MIT",
-  "summary": "Configure masterless puppet runs",
-  "source": "https://github.com/halyard/puppet-masterless",
-  "project_page": "https://github.com/halyard/puppet-masterless",
-  "issues_url": "https://github.com/halyard/puppet-masterless/issues",
+  "summary": "Configure serverless puppet runs",
+  "source": "https://github.com/halyard/puppet-serverless",
+  "project_page": "https://github.com/halyard/puppet-serverless",
+  "issues_url": "https://github.com/halyard/puppet-serverless/issues",
   "dependencies": [
 
   ],

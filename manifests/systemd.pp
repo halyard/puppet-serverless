@@ -1,10 +1,10 @@
 ##
-# Set up masterless runs on systemd-based systems
-class masterless::systemd {
-  $repodir = $masterless::repodir
-  $bindir = $masterless::bindir
-  $bootdelay = $masterless::bootdelay
-  $frequency = $masterless::frequency
+# Set up serverless runs on systemd-based systems
+class serverless::systemd {
+  $repodir = $serverless::repodir
+  $bindir = $serverless::bindir
+  $bootdelay = $serverless::bootdelay
+  $frequency = $serverless::frequency
 
   file { '/etc/systemd/system/multi-user.target.wants/puppet.service':
     ensure => absent
@@ -17,13 +17,13 @@ class masterless::systemd {
 
   file { '/etc/systemd/system/puppet-run.service':
     ensure  => 'file',
-    content => template('masterless/puppet-run.service.erb'),
+    content => template('serverless/puppet-run.service.erb'),
     notify  =>  Exec['Puppet-run refresh systemd']
   }
 
   file { '/etc/systemd/system/puppet-run.timer':
     ensure  => 'file',
-    content => template('masterless/puppet-run.timer.erb'),
+    content => template('serverless/puppet-run.timer.erb'),
     notify  =>  Exec['Puppet-run refresh systemd']
   }
 
