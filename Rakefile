@@ -1,10 +1,11 @@
-require 'puppetlabs_spec_helper/rake_tasks'
 require 'puppet_blacksmith/rake_tasks'
 require 'puppet-lint/tasks/puppet-lint'
 require 'puppet-syntax/tasks/puppet-syntax'
+require 'metadata-json-lint/rake_task'
 
 PuppetLint::RakeTask.new(:lint) do |config|
   config.fail_on_warnings = true
+  config.relative = true
   config.ignore_paths = ['vendor/**/*', 'pkg/**/*']
 end
 
@@ -26,5 +27,4 @@ task test: [
   :lint
 ]
 
-Rake::Task[:default].clear
 task default: [:test]
