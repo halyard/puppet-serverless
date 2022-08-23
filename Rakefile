@@ -9,6 +9,8 @@ PuppetLint::RakeTask.new(:lint) do |config|
   config.ignore_paths = ['vendor/**/*', 'pkg/**/*']
 end
 
+PuppetSyntax.exclude_paths = ["vendor/**/*"]
+
 Blacksmith::RakeTask.new do |t|
   t.tag_pattern = '%s'
 end
