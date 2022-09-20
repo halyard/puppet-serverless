@@ -10,7 +10,7 @@ class serverless::systemd {
     ensure => absent,
   }
 
-  file { ["${bindir}/puppet-run", "${bindir}/pr"]:
+  file { ["${bindir}/puppet-run", "${bindir}/p"]:
     ensure => link,
     target => "${repodir}/meta/puppet-run",
   }
