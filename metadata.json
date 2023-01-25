@@ -1,6 +1,6 @@
 {
   "name": "halyard-serverless",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "author": "Les Aker",
   "license": "MIT",
   "summary": "Configure serverless puppet runs",
