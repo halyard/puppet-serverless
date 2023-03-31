@@ -13,10 +13,11 @@ class serverless (
   String $bootdelay = '1min',
   String $frequency = '3600'
 ) {
-  case $facts['os']['family'] {
+  case $facts['os']['name'] {
     'Darwin': { include serverless::darwin }
     'Archlinux': { include serverless::systemd }
     'Arch': { include serverless::systemd }
+    'Ubuntu': { include serverless::systemd }
     default: { fail("Module does not support ${facts['os']['family']}") }
   }
 
