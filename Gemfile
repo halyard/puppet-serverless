@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'puppet', '~> 8.0.1'
+gem 'puppet', '~> 8.1.0'
 gem 'puppet-lint', '~> 4.0.0'
 gem 'puppet-blacksmith', '~> 7.0.0'
 gem 'puppet-syntax', '~> 3.3.0'
