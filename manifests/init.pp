@@ -24,13 +24,13 @@ class serverless (
   }
 
   tidy { $logdir:
-    age     => '90d',
+    age     => '7d',
     recurse => true,
     matches => 'puppet-run.*',
   }
 
   tidy { $reportdir:
-    age     => '90d',
+    age     => '7d',
     recurse => true,
     matches => '*.yaml',
   }
