@@ -26,7 +26,7 @@ class serverless (
   tidy { $logdir:
     age     => '7d',
     recurse => true,
-    matches => 'puppet-run.*',
+    matches => '*puppet-run.*',
     type    => 'mtime',
   }
 
