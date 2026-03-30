@@ -1,16 +1,12 @@
 {
   "name": "halyard-serverless",
-  "version": "0.2.32",
+  "version": "0.2.33",
   "author": "Les Aker",
   "license": "MIT",
   "summary": "Configure serverless puppet runs",
   "source": "https://github.com/halyard/puppet-serverless",
   "project_page": "https://github.com/halyard/puppet-serverless",
   "issues_url": "https://github.com/halyard/puppet-serverless/issues",
-  "dependencies": [
-
-  ],
-  "operatingsystem_support": [
-
-  ]
+  "dependencies": [],
+  "operatingsystem_support": []
 }
