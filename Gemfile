@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'openvox', '~> 8.25.0'
+gem 'openvox', '~> 8.28.1'
 gem 'puppet-lint', '~> 5.1.1'
 gem 'puppet-blacksmith', '~> 9.1.0'
 gem 'puppet-syntax', '~> 7.2.0'
