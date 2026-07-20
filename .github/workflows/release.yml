@@ -1,0 +1,17 @@
+---
+name: Release
+'on':
+  push:
+    tags:
+    - "**"
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run base CI
+      uses: akerl/.github/actions/base-ruby@main
+    - name: Publish release
+      uses: akerl/.github/actions/puppet-release@main
+      with:
+        api_key: ${{ secrets.BLACKSMITH_FORGE_API_KEY }}
