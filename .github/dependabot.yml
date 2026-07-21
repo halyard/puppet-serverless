@@ -5,7 +5,11 @@ updates:
     versioning-strategy: increase-if-necessary
     schedule:
       interval: daily
+    labels:
+      - mergewhenready
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: daily
+    labels:
+      - mergewhenready
