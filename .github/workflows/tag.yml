@@ -29,3 +29,4 @@ jobs:
       with:
         token: ${{ secrets.EXPORTER_TOKEN }}
         status: ${{ job.status }}
+      if: always()
